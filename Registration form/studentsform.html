@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid crimson;
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>Student Form</h1>
+    <table border="1">
+        <tr>
+            <td>Name</td>
+            <td><input type="text" style="width: 99%; height: 100%;" id="inputname" ></td>
+        </tr>
+        <tr>
+            <td>Age</td>
+            <td><input type="number" style="width: 99%;" id="ageenter" ></td>
+        </tr>
+        <tr>
+            <td>Course</td>
+            <td>
+                <select style="width: 100%;" id="courseenter" >
+                    <option value="html">HTML</option>
+                    <option value="python">Python</option>
+                    <option value="javascript">JavaScript</option>
+                    <option value="css">CSS</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Gender</td>
+            <td>
+                <div class="radio-container" id="genderenter">
+                    <input type="radio" id="male" name="male" value="male">
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="female" value="female" >
+                    <label for="female">Female</label>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td><input type="email" style="width: 99%;" id="mailenter" ></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <button style="width: 100%; background-color: aqua;" onclick="onSave()">Save</button>
+            </td>
+        </tr>
+    </table>
+    <br>
+    <br>
+    <br>
+    <h1>Saved Details</h1>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Course</th>
+            <th>Gender</th>
+            <th>Email</th>
+            <th>Action</th>
+        </tr>
+        <tbody id="tablebody"></tbody>
+
+    </table>
+    <script src="script.js"></script>
+</body>
+</html>
